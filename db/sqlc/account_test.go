@@ -12,7 +12,7 @@ import (
 func createRandomAccount(t *testing.T) Account {
 	args := CreateAccountParams{
 		Owner:    util.RandomOwner(),
-		Balance:  "1000",
+		Balance:  500,
 		Currency: util.RandomCurrency(),
 	}
 
@@ -51,7 +51,7 @@ func TestUpdateAccount(t *testing.T) {
 
 	args := UpdateAccountParams{
 		ID:      account1.ID,
-		Balance: "2000",
+		Balance: 500,
 	}
 
 	account2, err := testQueries.UpdateAccount(context.Background(), args)
